@@ -87,6 +87,10 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
     width: 100vw;
     margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .card {
@@ -160,6 +164,8 @@ body {
     /* sections display ----------------------------------------------------------- */
     .section-display {
         width: 100vw;
+
+        flex-direction: column;
     }
 
 }
