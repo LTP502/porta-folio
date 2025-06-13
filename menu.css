@@ -1,0 +1,72 @@
+@font-face {
+    font-family: Raleigh;
+    src:url(fonts/raleigh.ttf);
+
+    font-family: Caviar;
+    src:url(fonts/CaviarDreams.ttf);
+}
+
+body {
+    margin: 0;
+    width: 100%;
+}
+
+.navbar {
+    background-color: #fff;
+    z-index: 100;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.menu {
+    z-index: 100;
+    width: 100%;
+    border-radius: 40px;
+}
+
+.menu2 {
+    z-index: 100;
+    width: 100%;
+    border-radius: 40px;
+    text-align: end;
+}
+
+
+.menu-button {
+    background-color: transparent;
+    background-color: #ffffff;
+    color: #000000;
+    border: 3px solid #26807c;
+    cursor: pointer;
+    font-size:20px;
+    font-family: Caviar, Arial, Helvetica, sans-serif;
+    width: 150px;
+    height: 40px;
+    margin: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: 900;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-button:hover {
+    background-color: #26807c;
+    color: #e3ff42;
+    border: 3px dotted #e3ff42;
+    font-size:25px;
+    font-family: Caviar, Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+}
+
+
+/* Media query for desktop view */
+@media (min-width: 1024px) {
+
+}

@@ -1,0 +1,77 @@
+@font-face {
+    font-family: Raleigh;
+    src:url(fonts/raleigh.ttf);
+
+    font-family: Caviar;
+    src:url(fonts/CaviarDreams.ttf);
+
+    font-family: Caviar_Bold;
+    src:url(fonts/CaviarDreams_Bold.ttf);
+}
+
+.popup {
+    background-color:rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup.close {
+    opacity: 0;
+    z-index: -1;
+}
+
+.popup-inner {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 75%;
+}
+
+.popup-inner h2 {
+    margin-top: 0;
+    font-family: Caviar_Bold;
+    font-size: 30px;
+}
+
+.popup-inner p {
+    font-family: Caviar;
+    font-size: 25px;
+}
+
+.closePopup {
+    background-color: transparent;
+    background-color: #ffffff;
+    color: #000000;
+    border: 3px solid #26807c;
+    cursor: pointer;
+    font-size:20px;
+    font-family: Caviar, Arial, Helvetica, sans-serif;
+    width: 150px;
+    height: 40px;
+    margin: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: 900;
+    transition: all 0.3s ease-in-out;
+}
+
+.closePopup:hover {
+    background-color: #26807c;
+    color: #e3ff42;
+    border: 3px dotted #e3ff42;
+    font-size:25px;
+    font-family: Caviar, Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+}
