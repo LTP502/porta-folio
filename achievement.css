@@ -58,101 +58,134 @@ body {
     width: 100vw;
 }
 
-.pd-l1 {
-    width: 100vw;    
+.cert-title {
+    text-align: center;
+    width: 200px;
+    margin: 20px auto;
+    margin-top: 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    
+    font-family: Caviar_Bold, Arial, sans-serif;
+    text-align: center;
+    color: #000000;
+}
+
+.cert-title img {
+    display: block;
+    margin: 0 auto;
+    max-width: 200px;
+    height: auto;
+}
+
+.cert {
+    max-width: 90vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 20px;
-}
-
-/*------------------Carousel Styles----------------*/
-
-.carousel-wrapper {
-    max-width: 250px;
-    border-radius: 8px;
-}
-
-.carousel {
-    display: flex;
-    transition: transform 0.5s ease;
-}
-
-.carousel img {
-    width: 100%;
-    height: auto;
-}
-
-/*------------------Cards Styles----------------*/
-/* LEVEL 2 */
-.main {
-    font-family: Caviar, Arial, sans-serif;;
-    color: #000000;
-    display: flex;
-    flex-direction: column;
-    flex-wrap:wrap;
-    place-self: center;
     justify-content: center;
+    margin: auto;
 }
 
-.card {
-    background-color: #f4f1e9;
-    color: #8d3c38;
-
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 10px;
-
-    width: 100vw;
-    max-width: 99vw;
-    max-height: 200px;
-    margin-top:20px;
-    
+.cert tr {
     display: flex;
     flex-direction: row;
-    align-items: center;      /* Vertically center everything */
-    gap: 20px;                /* Space between items */
-
+    align-items: center;
+    justify-content: center;
+    width: 99vw;
+    background-color: seashell;
+    border-radius: 30px;
+    margin-bottom: 10px;
 }
 
+.cert td {
+    flex: 1;
+    text-align: center;
+}
 
-.card-title {
-    color: #000000;
+.cert h3 {
+    font-family: Caviar_Bold, Arial, sans-serif;
     font-size: 24px;
-    font-weight: 1000;
-    margin: 20px;
-    font-family: Caviar_Bold;
-    text-align: center;
-}
-
-.card h3{
     color: #000000;
-    font-size: 20px;
-    font-weight: 600;
-    margin: 20px;
-    font-family: Caviar;
-    text-align: center;
 }
 
-.card img {
+.cert img {
+    max-width: 50%;
+    max-height: 300px;
     height: auto;
-} 
-
-
-.video-container video{
-    width: 100%;
 }
 
-.button {
-    background-color: #8d3c38;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
+.cert p {
+    font-family: Caviar, Arial, sans-serif;
+    font-size: 18px;
+    color: #000000;
+}
+
+.icon-download {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.spacer {
+    line-height: 40px;
+}
+
+/* Pop-up for each cert */
+.cert-button {
+    background-color: transparent;
+    background-color: #ffffff;
+    color: #000000;
+    border: 3px solid #26807c;
     cursor: pointer;
-    font-size: 16px;
-    font-family: Raleigh;
+    font-size:20px;
+    font-family: Caviar, Arial, Helvetica, sans-serif;
+    width: 150px;
+    height: 40px;
+    margin: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: 900;
+    transition: all 0.3s ease-in-out;
+}
+
+.cert-button:hover {
+    background-color: #26807c;
+    color: #e3ff42;
+    border: 3px dotted #e3ff42;
+    font-size:25px;
+    font-family: Caviar, Arial, Helvetica, sans-serif;
     border-radius: 10px;
 }
+
+/* IBM cert */
+.IBM-cert {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.IBM-cert.open {
+    opacity: 1;
+    max-height: 3000px; /* Increased to fit larger content */
+}
+
+/* PBU cert */
+.PBU-cert {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.PBU-cert.open {
+    opacity: 1;
+    max-height: 3000px; /* Large enough for content */
+}
+
+
 
 /* Media query for mobile view */
 @media (max-width: 1024px  ) {
@@ -169,109 +202,13 @@ body {
         max-height: 60vh;
     }
 
-    /*carousel -----------------------------------------------------------*/
-    .carousel img {
-        width: 100%;
-        height: auto;
-    }
-
-    /*carousel2 -----------------------------------------------------------*/
-    .carousel2 img {
-        width: 100%;
-        height: auto;
-    }
-
-    /*carousel3 -----------------------------------------------------------*/
-    .carousel3 img {
-        width: 100%;
-        height: auto;
-    }
-
-    /*carousel4 -----------------------------------------------------------*/
-    .carousel4 img {
-        width: 100%;
-        height: auto;
-    }
-
-    .carousel-container {
-        width: 60%;
-    }
-
-    .main {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    /* cards -----------------------------------------------------------*/
-    .card {
-        background-color: #f4f1e9;
-        color: #8d3c38;
-    
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    
-        margin: 10px;
-        margin-bottom: 10px;
-        gap: 5px;
-        padding: 10px;
-    
-        width: 100vw;
-        max-width: 100vw;
-        max-height: 350px;
-        
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-        overflow: hidden;
-    }
-
-    /* spacer ----------------------------------------------------------- */
-
-    .spacer {
-        line-height: 0px;
-        height: 0px;
-    }
-
     /* sections display ----------------------------------------------------------- */
     .section-display {
         width: 100vw;
     }
 
-    .pd-l1 {
-        width: 100vw;
-    }
-
-    .list {
+    .cert tr {
         flex-direction: column;
-    }
-
-    .section {
-        margin:0px;
-        font-size: 20px;
-        width: 100%;
-    }
-
-    .section-list {
-        margin:0px;
-        font-size: 20px;
-        width: 100%;
-    }
-
-    .section-title {
-        font-size: 40px;
-    }
-
-    .section-desc {
-        font-size: 20px;
-    }
-
-    .word-list {
-        align-items: center;
-        flex-direction: column;
-        height: 500px;
-
-        overflow: hidden;
-        text-overflow: ellipsis;
+        padding-bottom: 10px;
     }
 }

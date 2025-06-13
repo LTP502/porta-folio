@@ -5,7 +5,7 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <title>My Contact</title>
-    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="menu.css">
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="pop_up.css">
@@ -23,15 +23,37 @@
     <!-- ----------------------------TITLE------------------------------- -->
     <div class="title-container">
         <h1 class="title">
-            Aww man :(
+            My Contact!
             <br><br>
-            Sorry, this page is still <u>under construction.</u>
-            <br><br>
-            It'll be updated soon. I promise!</h1>
-        <img class="title-image" src="img/construction.png" alt="Penang">
+            Lets get in touch.</h1>
+        <img class="title-image" src="img/contact.png" alt="Cover Image">
 
     </div>
+    <!-- ----------------------------CERTIFICATES------------------------------- -->
+    <div class="section-display">
+        
+        <!-- ----------------------------Cert Title: IBM------------------------------- -->
+        <div class="card">
+            <img class="card-image" src="img/phone.png" alt="Phone Icon">        
+            <h3 id="phone-number">+60 13-430 1524</h3>
+            <button class="copy-btn" onclick="copyToClipboard('phone-number')">Copy</button>
+        </div>
 
+        <div class="card">
+            <img class="card-image" src="img/email.png" alt="Email Icon">
+            <h3 id="email-address"><a>levifern47@gmail.com</a></h3>
+            <button class="copy-btn" onclick="copyToClipboard('email-address')">Copy</button>
+        </div>
+
+        <div class="card">
+            <h3>My Resume</h3>
+            <img class="card-image" src="img/Resume.png" alt="Resume Thumbnail">
+            <a href="certs/Levi_James_Fernandez-Resume.pdf" download class="download-button" title="Download">
+                <svg class="icon-download"><use href="#icon-download"></use></svg>
+            </a>
+        </div>
+
+    </div>
     <!-- Foooter -->
     <footer> 
         <div class="footer">
@@ -42,12 +64,33 @@
     
     <!-- ----------------------------SCRIPTS------------------------------- -->
 
+    <svg style="display:none;" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="icon-download" viewBox="0 0 16 16">
+            <path d="M.5 9.9a.5.5 0 0 1 .5.5V13a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.6a.5.5 0 0 1 1 0V13a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.6a.5.5 0 0 1 .5-.5z"/>
+            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+        </symbol>
+    </svg>
+
     <!-- Script to handle navbar menu -->
     <script src="menu.js" type="module"></script>
 
  
     <!-- Script to handle pop-up message-->
     <script src="pop_up.js"></script>
+
+    <!-- Script to handle copy feature-->
+    <script>
+        function copyToClipboard(elementId) {
+            const el = document.getElementById(elementId);
+            let text = el.innerText || el.textContent;
+            if (el.querySelector('a')) {
+                text = el.querySelector('a').innerText || el.querySelector('a').textContent;
+            }
+            navigator.clipboard.writeText(text).then(function() {
+                // Optionally, show feedback
+            });
+        }
+    </script>
     
 </body>
 </html>
